@@ -1,0 +1,457 @@
+/*
+Theme Name: Morgan's WordPress Demo
+Author: Morgan Richmond
+Author URI: http://www.morgancodes.com/
+Description: This is my demo theme for the WEB170 WordPress class.
+Version: 1.0
+*/
+
+/*here are styles for everything but the content*/
+*{
+	margin: 0;
+	padding: 0;
+    font-family: Arial, Verdana, sans-serif;
+    color: #665544;
+}
+html{
+  height: 100%;
+  width: 100%;
+}
+body{
+    height: 100%;
+    position: relative;
+    background-image: url("https://cdn.elegantthemes.com/blog/wp-content/uploads/2013/09/bg-6-full.jpg");
+    background-size: cover;
+}
+.site{
+    background-color: white;
+    height:auto;
+    min-height: 100%;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    flex: 1;
+}
+header{
+}
+.wrapper{
+    flex: 1;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+footer 
+{
+    border-top: 2px dashed #9cc;
+    text-align: center;
+    font-size: 20px;
+}
+
+form{
+    margin: 0 auto;
+}
+.image {
+    display: flex;
+    justify-content: flex-start;
+    align-items: baseline;
+}
+.logo{
+    color: rosybrown;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-family: 'Satisfy', cursive;
+    font-size: 60px;
+
+}
+h1, h2, h3{
+    color: rosybrown;
+}
+h2{
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+/**/
+#main-nav   {
+    height: 30px; /* set to the height you want your menu to be */
+    margin: 0 0 10px; /* just to give some spacing */
+}
+#main-nav ul    {
+    margin: 0; padding: 0; /* only needed if you have not done a CSS reset */
+}
+#main-nav li    {
+    display: block;
+    float: left;
+    line-height: 30px; /* this should be the same as your #main-nav height */
+    height: 30px; /* this should be the same as your #main-nav height */
+    margin: 0; padding: 0; /* only needed if you don't have a reset */
+    position: relative; /* this is needed in order to position sub menus */
+}
+#main-nav li a  {
+    display: block;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 15px;
+}
+#main-nav .current-menu-item a, #main-nav .current_page_item a, #main-nav a:hover {
+    color: #000;
+    background: #ccc;
+}
+
+#main-nav ul ul { /* this targets all sub menus */
+    display: none; /* hide all sub menus from view */
+    position: absolute;
+    top: 30px; /* this should be the same height as the top level menu -- height + padding + borders */
+}
+#main-nav ul ul li { /* this targets all submenu items */
+    float: none; /* overwriting our float up above */
+    width: 150px; /* set to the width you want your sub menus to be. This needs to match the value we set below */
+}
+#main-nav ul ul li a { /* target all sub menu item links */
+    padding: 5px 10px; /* give our sub menu links a nice button feel */
+}
+
+#main-nav ul li:hover > ul {
+    display: block; /* show sub menus when hovering over a parent */
+}
+
+/*#main-nav ul ul li ul {
+    /* target all second, third, and deeper level sub menus */
+    left: 150px; /* this needs to match the sub menu width set above -- width + padding + borders */
+    top: 0; /* this ensures the sub menu starts in line with its parent item 
+}*/
+
+/**/
+
+.logo{
+    width: 100%;
+    text-align: center;
+}
+.logo a{
+    font-family: 'Satisfy', cursive;
+    color: rosybrown;
+    text-decoration: none;
+}
+/*gallery starts here!*/
+.slideshow{
+    width: 100%;
+    margin-left: 55px;
+    margin-right: 20px;
+}
+.slideshow img{
+    height: 25%;
+    width: 25%;
+    float: left;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.fadein { 
+    position:relative; 
+    width:500px; height:332px; 
+}
+.fadein img { 
+    position:absolute; 
+    left:0; 
+    top:0; 
+    
+}
+
+
+@media screen and (max-width:680px) {
+    .slideshow{
+        margin-left: -20px;
+        margin-right: 20px;
+    }
+    
+    .slideshow img{
+        height: 100%;
+        width: 100%;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+}
+
+/*here are my styles for the design of the pages*/
+section{
+    margin-top: 20px;
+    margin-left: 20px;
+    height: auto;
+    width: 50%;
+    float: left;
+}
+.post{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 100%;
+    border-top: 1px solid grey;
+    border-bottom: 1px solid grey;
+}
+.post p{
+    margin-left: 10px;
+}
+aside{
+    display: block;
+    margin-top: 20px;
+    height: auto;
+    width: 40%;
+    float: right;
+}
+.aboutPosts{
+    display: block;
+}
+.meganPic{
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    float: right;
+}
+.meganPic img{
+    height: 150px;
+    width: 150px;
+}
+.aboutPage{
+    margin-top: 20px;
+}
+.aboutPage h2{
+    text-align: center;
+}
+.aboutPage img{
+    display: block;
+    float: left;
+    margin-right: 20px;
+    height: 25%;
+    width: 25%;
+    align-content: center;
+}
+
+
+@media screen and (max-width:680px) {
+    .section2{
+        float: left;
+    }
+}
+
+@media screen and (max-width:680px) {
+    aside{
+        display: none;
+    }
+    section{
+        width: 100%;
+        margin: 0 auto;
+    }
+}
+/* Preload images */
+body:after {
+  content: url(../http://morgancodes.com/final-project/imgs/img5.jpg) url(../http://morgancodes.com/final-project/imgs/img4.jpg) url(../http://morgancodes.com/final-project/imgs/img3.jpg);
+  display: none;
+}
+
+body.lb-disable-scrolling {
+  overflow: hidden;
+}
+
+.lightboxOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  background-color: black;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
+  opacity: 0.8;
+  display: none;
+}
+
+.lightbox {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  z-index: 10000;
+  text-align: center;
+  line-height: 0;
+  font-weight: normal;
+}
+
+.lightbox .lb-image {
+  display: block;
+  height: auto;
+  max-width: inherit;
+  max-height: none;
+  border-radius: 3px;
+
+  /* Image border */
+  border: 4px solid white;
+}
+
+.lightbox a img {
+  border: none;
+}
+
+.lb-outerContainer {
+  position: relative;
+  *zoom: 1;
+  width: 250px;
+  height: 250px;
+  margin: 0 auto;
+  border-radius: 4px;
+
+  /* Background color behind image.
+     This is visible during transitions. */
+  background-color: white;
+}
+
+.lb-outerContainer:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.lb-loader {
+  position: absolute;
+  top: 43%;
+  left: 0;
+  height: 25%;
+  width: 100%;
+  text-align: center;
+  line-height: 0;
+}
+
+.lb-cancel {
+  display: block;
+  width: 32px;
+  height: 32px;
+  margin: 0 auto;
+  background: url(../images/loading.gif) no-repeat;
+}
+
+.lb-nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 10;
+}
+
+.lb-container > .nav {
+  left: 0;
+}
+
+.lb-nav a {
+  outline: none;
+  background-image: url('data:image/gif;base64,R0lGODlhAQABAPAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==');
+}
+
+.lb-prev, .lb-next {
+  height: 100%;
+  cursor: pointer;
+  display: block;
+}
+
+.lb-nav a.lb-prev {
+  width: 34%;
+  left: 0;
+  float: left;
+  background: url(../images/prev.png) left 48% no-repeat;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+  -webkit-transition: opacity 0.6s;
+  -moz-transition: opacity 0.6s;
+  -o-transition: opacity 0.6s;
+  transition: opacity 0.6s;
+}
+
+.lb-nav a.lb-prev:hover {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
+}
+
+.lb-nav a.lb-next {
+  width: 64%;
+  right: 0;
+  float: right;
+  background: url(../images/next.png) right 48% no-repeat;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+  -webkit-transition: opacity 0.6s;
+  -moz-transition: opacity 0.6s;
+  -o-transition: opacity 0.6s;
+  transition: opacity 0.6s;
+}
+
+.lb-nav a.lb-next:hover {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
+}
+
+.lb-dataContainer {
+  margin: 0 auto;
+  padding-top: 5px;
+  *zoom: 1;
+  width: 100%;
+  -moz-border-radius-bottomleft: 4px;
+  -webkit-border-bottom-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+  -moz-border-radius-bottomright: 4px;
+  -webkit-border-bottom-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+.lb-dataContainer:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.lb-data {
+  padding: 0 4px;
+  color: #ccc;
+}
+
+.lb-data .lb-details {
+  width: 85%;
+  float: left;
+  text-align: left;
+  line-height: 1.1em;
+}
+
+.lb-data .lb-caption {
+  font-size: 13px;
+  font-weight: bold;
+  line-height: 1em;
+}
+
+.lb-data .lb-caption a {
+  color: #4ae;
+}
+
+.lb-data .lb-number {
+  display: block;
+  clear: left;
+  padding-bottom: 1em;
+  font-size: 12px;
+  color: #999999;
+}
+
+.lb-data .lb-close {
+  display: block;
+  float: right;
+  width: 30px;
+  height: 30px;
+  background: url(../images/close.png) top right no-repeat;
+  text-align: right;
+  outline: none;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
+  opacity: 0.7;
+  -webkit-transition: opacity 0.2s;
+  -moz-transition: opacity 0.2s;
+  -o-transition: opacity 0.2s;
+  transition: opacity 0.2s;
+}
+
+.lb-data .lb-close:hover {
+  cursor: pointer;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
+}
