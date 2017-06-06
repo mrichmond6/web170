@@ -4,17 +4,16 @@
 		<title>
 			<?php bloginfo('description');?> | <?php bloginfo('name');?>
 		</title>
-		
-		<!--Meta info-->
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<!--End meta-->
-		
 		<!--Begin the stylesheets-->
 		<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="all" />
 		<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/css/contact.css" />
 		<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/flexslider.css" />
 		
 		<!--End the stylesheets-->
+		
+		<!--Meta info-->
+		<meta name="viewport" content="width=device-width">
+		<!--End meta-->
 		
 		<!--Begin scripts-->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
@@ -47,3 +46,4 @@
 </div>
 		
 <small>header.php</small>
+<div id="content">

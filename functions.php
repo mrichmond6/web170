@@ -12,9 +12,8 @@ register_sidebar(array(
 register_nav_menus(array(
 	'main' => __( 'Main' ),
 ));
-//Create post thumbnails
+//Create post thumbnails	
 add_theme_support( 'post-thumbnails' );
-
 //Create the page excerpts
 add_post_type_support( 'page', 'excerpt' );
 

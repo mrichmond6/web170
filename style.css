@@ -27,18 +27,11 @@ body{
     background-color: white;
     height:auto;
     min-height: 100%;
-    width: 70%;
+    width: 80%;
     display: flex;
     flex-direction: column;
     margin: 0 auto;
     flex: 1;
-}
-header{
-}
-.wrapper{
-    flex: 1;
-    margin-left: 20px;
-    margin-right: 20px;
 }
 footer 
 {
@@ -50,11 +43,6 @@ footer
 form{
     margin: 0 auto;
 }
-.image {
-    display: flex;
-    justify-content: flex-start;
-    align-items: baseline;
-}
 .logo{
     color: rosybrown;
     margin-top: 20px;
@@ -63,14 +51,34 @@ form{
     font-size: 60px;
 
 }
-h1, h2, h3{
-    color: rosybrown;
+.aboutMegan{
+	text-align: left;
+	color: rosybrown;
 }
-h2{
-    margin-bottom: 10px;
-    text-align: left;
+h1, h2, h3, h4, h5{
+	font-size: 30px;
+	margin-top: 10px;
+	color: rosybrown;
+	text-align: center;
 }
 
+#widgets{
+	width: 100%;
+}
+.widget-item h1, h2{
+	text-align: left;
+}
+ul{
+	list-style: none;
+}
+p{
+	margin-top: 10px;
+}
+#sidebar{
+	width: 30%;
+	float: right;
+}
+/**/
 /**/
 #main-nav   {
     height: 30px; /* set to the height you want your menu to be */
@@ -78,10 +86,10 @@ h2{
 }
 #main-nav ul    {
     margin: 0; padding: 0; /* only needed if you have not done a CSS reset */
+	text-align: center;
 }
 #main-nav li    {
-    display: block;
-    float: left;
+    display: inline-block;
     line-height: 30px; /* this should be the same as your #main-nav height */
     height: 30px; /* this should be the same as your #main-nav height */
     margin: 0; padding: 0; /* only needed if you don't have a reset */
@@ -115,12 +123,6 @@ h2{
     display: block; /* show sub menus when hovering over a parent */
 }
 
-/*#main-nav ul ul li ul {
-    /* target all second, third, and deeper level sub menus */
-    left: 150px; /* this needs to match the sub menu width set above -- width + padding + borders */
-    top: 0; /* this ensures the sub menu starts in line with its parent item 
-}*/
-
 /**/
 
 .logo{
@@ -132,31 +134,6 @@ h2{
     color: rosybrown;
     text-decoration: none;
 }
-/*gallery starts here!*/
-.slideshow{
-    width: 100%;
-    margin-left: 55px;
-    margin-right: 20px;
-}
-.slideshow img{
-    height: 25%;
-    width: 25%;
-    float: left;
-    margin-top: 20px;
-    margin-left: 20px;
-    margin-right: 20px;
-}
-.fadein { 
-    position:relative; 
-    width:500px; height:332px; 
-}
-.fadein img { 
-    position:absolute; 
-    left:0; 
-    top:0; 
-    
-}
-
 
 @media screen and (max-width:680px) {
     .slideshow{
@@ -173,22 +150,16 @@ h2{
 }
 
 /*here are my styles for the design of the pages*/
+#content{
+	width: 90%;
+	margin: 0 auto;
+}
 section{
     margin-top: 20px;
     margin-left: 20px;
     height: auto;
     width: 50%;
     float: left;
-}
-.post{
-    margin-top: 20px;
-    margin-bottom: 20px;
-    width: 100%;
-    border-top: 1px solid grey;
-    border-bottom: 1px solid grey;
-}
-.post p{
-    margin-left: 10px;
 }
 aside{
     display: block;
@@ -197,51 +168,15 @@ aside{
     width: 40%;
     float: right;
 }
-.aboutPosts{
-    display: block;
-}
-.meganPic{
-    height: 150px;
-    width: 150px;
-    border-radius: 50%;
-    overflow: hidden;
-    float: right;
-}
-.meganPic img{
-    height: 150px;
-    width: 150px;
-}
-.aboutPage{
-    margin-top: 20px;
-}
-.aboutPage h2{
-    text-align: center;
-}
-.aboutPage img{
+img{
     display: block;
     float: left;
     margin-right: 20px;
-    height: 25%;
-    width: 25%;
+    height: 50%;
+    width: 50%;
     align-content: center;
 }
 
-
-@media screen and (max-width:680px) {
-    .section2{
-        float: left;
-    }
-}
-
-@media screen and (max-width:680px) {
-    aside{
-        display: none;
-    }
-    section{
-        width: 100%;
-        margin: 0 auto;
-    }
-}
 /* Preload images */
 body:after {
   content: url(../http://morgancodes.com/final-project/imgs/img5.jpg) url(../http://morgancodes.com/final-project/imgs/img4.jpg) url(../http://morgancodes.com/final-project/imgs/img3.jpg);
@@ -454,4 +389,17 @@ body.lb-disable-scrolling {
   cursor: pointer;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
   opacity: 1;
+}
+
+/*media queries go here*//*For browser/screen widths less than 768px*/
+@media screen and (max-width: 768px) {
+
+    .site {
+        width: 100%;
+		margin: 0 auto;
+		background-color: white;
+    }
+    #sidebar {
+        width: 100%;
+    }
 }
