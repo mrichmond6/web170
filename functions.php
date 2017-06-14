@@ -12,7 +12,7 @@ register_sidebar(array(
 register_nav_menus(array(
 	'main' => __( 'Main' ),
 ));
-//Create post thumbnails	
+//Create post thumbnails
 add_theme_support( 'post-thumbnails' );
 //Create the page excerpts
 add_post_type_support( 'page', 'excerpt' );
@@ -40,5 +40,10 @@ function get_my_title_tag(){
 	echo ' | ';
 	echo 'Seattle, WA'; //location
 }
+
+function wpcodex_add_excerpt_support_for_pages(){
+	add_post_type_support('page', 'excerpt');
+}
+add_action('init', 'wpcodex_add_excerpt_support_for_pages');
 
 ?>

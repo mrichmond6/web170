@@ -13,6 +13,7 @@
 		
 		<!--Meta info-->
 		<meta name="viewport" content="width=device-width">
+		<meta name="description" content="<? echo get_the_excerpt();?>"/>
 		<!--End meta-->
 		
 		<!--Begin scripts-->
